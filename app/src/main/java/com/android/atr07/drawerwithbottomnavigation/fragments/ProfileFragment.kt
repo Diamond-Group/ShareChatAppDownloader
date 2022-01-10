@@ -14,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 
 import com.android.atr07.drawerwithbottomnavigation.R
 import com.android.atr07.drawerwithbottomnavigation.databinding.FragmentProfileBinding
@@ -43,6 +45,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var navController: NavController
+
     private val TAG = "Custom Message"
     private var message: String? = null
 
@@ -53,22 +58,36 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-
-
-        binding.downloadBtn.setOnClickListener {
-            getShareChatData()
-        }
-
         //register for receiver
         /*getActivity()?.registerReceiver(
             onDownloadComplete,
             IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE)
         );*/
 
-
         // Inflate the layout for this fragment
         return binding.root
 
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = findNavController() //Initialising navController
+
+        //Initialising button click event listener
+        binding.downloadBtn.setOnClickListener {
+            getShareChatData()
+        }
+
+        binding.pasteBtn.setOnClickListener {
+            goToNextFragment()
+        }
+
+    }
+
+    private fun goToNextFragment(){
+        val action = ProfileFragmentDirections.actionProfileFragmentToDemoFragment()//if needed pass values to frag here NB: add that arguments to nav_graph also
+        navController.navigate(action) //navigation
     }
 
     private fun getShareChatData() {
@@ -207,5 +226,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     }
 
  */
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
 }

@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.profileFragment -> hideBothNavigation()
                 R.id.settingsFragment -> hideBottomNavigation()
+                R.id.demoFragment -> hideBothNavigation()
                 else -> showBothNavigation()
             }
         }
