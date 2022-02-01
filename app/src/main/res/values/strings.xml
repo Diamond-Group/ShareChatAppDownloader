@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Sharechat Downloader</string>
+    <string name="account">Account</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+
+    <string name="atr07">ShareChat Video Downloader</string>
+    <string name="next_fragment">Next Fragment</string>
+    <string name="close_app">Close App</string>
+
+    <!--Bottom navigation-->
+    <string name="home">Home</string>
+    <string name="download">Download</string>
+
+    <!--Fragment strings-->
+    <string name="accounts_fragment">Accounts Fragment</string>
+    <string name="dashboard_fragment">Dashboard Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="settings_fragment">Settings Fragment</string>
+
+    <!-- VideoView Strings-->
+    <string name="total_videos">Total Videos</string>
+    <string name="image">Image</string>
+    <string name="duration">00.00</string>
+    <string name="folder_name">Folder Name</string>
+    <string name="video_name">Video Name</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+    <string name="info">Info</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="disclaimer">Disclaimer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="email">anmolhira.group@gmail.com</string>
+    <string name="refresh_btn">Refresh</string>
+
+</resources>

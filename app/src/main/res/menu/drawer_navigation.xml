@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Each item id should be same as in the nav_graph fragment id-->
+
+    <!--<item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/dashboard" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings" />-->
+
+    <item
+        android:id="@+id/privacyPolicy"
+        android:icon="@drawable/privacy_policy"
+        android:title="@string/privacy_policy" />
+
+    <item
+        android:id="@+id/disclaimerFragment"
+        android:icon="@drawable/disclaimer_icon"
+        android:title="@string/disclaimer" />
+
+
+</menu>
